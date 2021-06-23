@@ -26,8 +26,9 @@ public class SeleniumTest {
     @BeforeTest
     public void beforeTest() {
         ChromeDriverManager.getInstance().setup();
+        ChromeDriverManager.chromedriver().driverVersion("91.0.4472.114").setup();
         driver = new ChromeDriver();
-        driver.ChromeDriver().driverVersion("91.0.4472.114").setup();
+       
     }
     @AfterTest
     public void afterTest() {
