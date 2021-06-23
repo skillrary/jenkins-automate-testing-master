@@ -1,6 +1,5 @@
 package ec.com.ucuenca;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.jruby.RubyProcess;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -27,11 +26,10 @@ public class SeleniumTest {
     }
     @BeforeTest
     public void beforeTest() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        WebDriverManager.chromedriver().driverVersion("91.0.4472.101").setup();
+
         ChromeDriverManager.getInstance().setup();
        
-        driver = new ChromeDriver(chromeOptions);
+        driver = new ChromeDriver();
        
     }
     @AfterTest
