@@ -1,5 +1,6 @@
 package ec.com.ucuenca;
 
+import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.jruby.RubyProcess;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,8 +8,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * Created by santteegt on 20/07/2017.
@@ -16,7 +15,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class SeleniumTest {
 
     private WebDriver driver;
-    
 
     @Test
     public void testEasy() {
@@ -26,11 +24,8 @@ public class SeleniumTest {
     }
     @BeforeTest
     public void beforeTest() {
-
         ChromeDriverManager.getInstance().setup();
-       
         driver = new ChromeDriver();
-       
     }
     @AfterTest
     public void afterTest() {
