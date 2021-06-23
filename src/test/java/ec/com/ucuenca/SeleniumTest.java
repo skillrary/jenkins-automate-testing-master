@@ -8,6 +8,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 /**
  * Created by santteegt on 20/07/2017.
@@ -26,6 +27,7 @@ public class SeleniumTest {
     @BeforeTest
     public void beforeTest() {
 
+        WebDriverManager.chromedriver().driverVersion("91.0.4472.101").setup();
         ChromeDriverManager.getInstance().setup();
        
         driver = new ChromeDriver();
