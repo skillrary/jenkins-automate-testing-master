@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.AfterTest;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 /**
  * Created by santteegt on 20/07/2017.
@@ -26,11 +27,11 @@ public class SeleniumTest {
     }
     @BeforeTest
     public void beforeTest() {
-
+        ChromeOptions chromeOptions = new ChromeOptions();
         WebDriverManager.chromedriver().driverVersion("91.0.4472.101").setup();
         ChromeDriverManager.getInstance().setup();
        
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
        
     }
     @AfterTest
