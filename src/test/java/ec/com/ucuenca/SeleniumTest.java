@@ -15,6 +15,7 @@ import org.testng.annotations.AfterTest;
 public class SeleniumTest {
 
     private WebDriver driver;
+    driver.chromedriver().driverVersion("91.0.4472.114").setup();
 
     @Test
     public void testEasy() {
