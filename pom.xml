@@ -59,7 +59,7 @@
             <systemProperties>
               <webdriver.driver>${webdriver.driver}</webdriver.driver>
               <webdriver.remote.driver>${webdriver.remote.driver}</webdriver.remote.driver>
-              <webdriver.remote.url>${webdriver.remote.url}</webdriver.remote.url>
+              <webdriver.remote.url>https://chromedriver.storage.googleapis.com/91.0.4472.101/chromedriver_linux64.zip</webdriver.remote.url>
               <serenity.driver.capabilities>${serenity.driver.capabilities}</serenity.driver.capabilities>
             </systemProperties>
           </systemPropertyVariables>
