@@ -26,7 +26,7 @@ public class SeleniumTest {
     @BeforeTest
     public void beforeTest() {
         ChromeDriverManager.getInstance().setup();
-        System.setProperty("webdriver.chrome.driver", "/home/ec2-user");
+        System.setProperty("webdriver.chrome.driver", "/home/ec2-user/chromedriver");
         driver = new ChromeDriver();
        
     }
